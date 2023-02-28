@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Technologies - Anton Kireyev</title>
+    <link rel="icon" type="image/camping-icon" href="images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abel"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cookie"
+    />
+    <style>
+      /* CSS HEX / Color Palette
+--beige: #f5f5dcff;
+--steel-teal: #55828bff;
+--deep-space-sparkle: #3b6064ff;
+--slimy-green: #379634ff;
+--dark-sienna: #49111cff;
+-- rose-quartz: #9E90A2;
+*/
+      h1 {
+        font-family: Roboto;
+        color: #3b6064;
+        text-align: center;
+      }
+      h2 {
+        font-family: Inter;
+        color: #3b6064;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-family: Cookie;
+        text-align: center;
+        font-size: 2em;
+        color: #3b6064;
+      }
+      p {
+        text-indent: 30px;
+        font-size: 1.2em;
+        font-family: Abel;
+        text-align: left;
+        margin: 1em;
+      }
+      body {
+        background: #f5f5dc;
+        margin-left: 120px;
+        margin-right: 120px;
+      }
+      img {
+        display: block;
+        float: left;
+        margin: 20px;
+        height: 300px;
+        transition: 0.5s;
+        border: #379634;
+        border-style: solid;
+      }
+      /* (https://www.w3schools.com/howto/howto_css_zoom_hover.asp)I wanted the images to enlarge over hover, I learned the transition, transform(unused here), and scale properties. In addition I read about the :hover selector */
+      img:hover {
+        scale: 1.5;
+      }
+      a {
+        text-decoration: none;
+        color: #55828b;
+        font-family: Abel;
+      }
+
+      .horizontal-line {
+        width: 100%;
+        height: 2px;
+        background-color: #379634;
+        margin-top: 5px;
+      }
+      .spacer {
+        width: 100%;
+        margin-bottom: 18em;
+      }
+      /* included as a way to space this section from the one above it by only using internal css and not inline. */
+      #hobbies {
+        margin-top: 14em;
+      }
+      .navbar-list {
+        list-style: none;
+        margin: 0;
+        text-align: center;
+        height: 40px;
+      }
+      li {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      .navbar-text,
+      .navbar-link {
+        color: black;
+        font-size: 30px;
+      }
+      .navbar-link:hover {
+        color: lightgray;
+      }
+      .navbar-text {
+        margin-right: 10em;
+        margin-left: -16em;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 100px;
+        z-index: 1;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      li.dropdown {
+        display: inline-block;
+      }
+      .dropdown:hover {
+        color: #55828b;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .dropbutton{
+        color: black;
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR! -->
+    <div class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-text"><strong>Anton Kireyev</strong></li>
+        <li><a href="#about" class="navbar-link">About Me</a></li>
+        <li><a href="#hobbies" class="navbar-link">My Hobbies</a></li>
+        <li><a href="#contact" class="navbar-link">My Contact</a></li>
+        <li><a href="sitemap.html" class="navbar-link">My Projects</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbutton navbar-link">Homework 2</a>
+          <div class="dropdown-content">
+            <a href="hw2-1.html" class="navbar-link">hw2-1</a>
+            <a href="hw2-2.html" class="navbar-link">hw2-2</a>
+            <a href="hw2-3.html" class="navbar-link">hw2-3</a>
+            <a href="hw2-4.html" class="navbar-link">hw2-4</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- ABOUT ME SECTION-->
+    <div class="horizontal-line"></div>
+    <h2 id="about">About Me</h2>
+
+    <p>
+      <!-- I decided that I wanted to include captions on my images.-->
+
+      <img
+        src="images/myself.jpg"
+        alt="picture of myself"
+        title="Vienna, Austria"
+      />
+    </p>
+
+    <p>
+      I chose
+      <a href="https://www.babson.edu" target="_blank">Babson College</a>
+      because I wanted to go to a small business school and it was also
+      convenient that it was close to home. After graduation I plan to work in
+      either the analytics or IT field.
+    </p>
+
+    <!-- <div class="spacer"></div> -->
+    <!-- MY HOBBIES SECTION-->
+    <h2 id="hobbies">My Hobbies</h2>
+
+    <img
+      src="https://cdn.akamai.steamstatic.com/steam/apps/570/capsule_616x353.jpg"
+      alt="dota 2 promotional image"
+      title="Dota 2"
+    />
+    <p>
+      During my free time I like to play video games with friends. I
+      occasionally join tournaments with a team and compete in open leagues. My
+      favorite game to play right now is
+      <a href="https://www.dota2.com/home" target="_blank">Dota 2</a>. However,
+      I also compete in CS:GO collegiate leagues for Babson Esports. I also like
+      to keep up with sports. My favorite sport would have to be Soccer, I love
+      to watch and play it.
+    </p>
+
+    <div class="spacer"></div>
+    <div class="horizontal-line"></div>
+    <!-- CONTACT SECTION-->
+    <h3 id="contact">Contact Information</h3>
+    <p>Anton Kireyev &nbsp; OIM3690-02</p>
+    <p>
+      <a href="https://github.com/AntonKireyev" target="_blank">Github</a> |
+      <a href="https://www.linkedin.com/in/anthonykireyev/" target="_blank"
+        >LinkedIn</a
+      >
+      | <a href="mailto:akireyev1@babson.edu">Email Me!</a> |
+      <a href="sitemap.html">My Projects</a>
+    </p>
+  </body>
+</html>
