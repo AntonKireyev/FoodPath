@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Foodpath is a website built to connect people to restaurants"
+    />
     <title>foodpath!</title>
     <link rel="icon" type="image/food-icon" href="images/favicon.ico" />
     <link
@@ -33,10 +37,12 @@
       h1 {
         font-family: Inter;
         color: #1e212bff;
-        text-align: center;
+      }
+      h2 {
+        font-family: Inter;
+        color: #1e212bff;
       }
       p {
-        text-indent: 30px;
         font-size: 1.2em;
         font-family: Inter;
         text-align: left;
@@ -47,32 +53,6 @@
         background: #e4fde1ff;
         margin: auto;
       }
-      .button {
-        background-color: #8acb88ff;
-        border: none;
-        color: #1e212bff;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        border-radius: 8px;
-        height: 2em;
-      }
-      /* ul {
-        list-style: none;
-        margin: 0;
-        text-align: left;
-        background-color: #8acb88ff;
-        height: 40px;
-        display: flex;
-      }
-      li {
-        display: inline-block;
-        margin-left: 20px;
-        margin-right: 20px;
-        color: #dadada;
-        font-size: 12px;
-      } */
       a {
         text-decoration: none;
         color: #1e212bff;
@@ -81,28 +61,147 @@
       a:hover {
         color: white;
       }
-      .container {
-        display: flex;
-        margin: auto;
-        justify-content: flex-end;
+      .button:hover{
+        background-color: green;
       }
-      .navbutton{
-        margin: 10px;
+      .header {
+        display: flex;
+        margin-bottom: 5em;
+        justify-content: space-between;
+        align-items: center;
+        /* border: 1px solid black; */
+        background-color: #8acb88ff;
+      }
+      .title {
+        margin-left: 20px;
+      }
+      .navbutton {
+        margin: 0;
+        background-color: #8acb88ff;
+        padding: 2em 1em;
+        text-align: center;
+      }
+      .navbutton:hover {
+        background-color: green;
+      }
+      .button {
+        margin: 0;
+        background-color: #8acb88ff;
+        border: 0;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid black;
+        
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .action {
+        margin-top: 2em;
+        margin-bottom: 6em;
+        /* border: 1px black solid; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+      }
+      .main {
+        /* border: 1px black solid; */
+        height: 30em;
+        width: 100%;
+        margin: auto;
+        display: flex;
+      }
+      .column {
+        /* border: 1px black solid; */
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #8acb88ff;
+      }
+      .map {
+        margin-top: 4em;
+        padding-bottom: 10em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .caption {
+        text-align: center;
+        width: 60%;
+      }
+      /* can use Z-index to make a slide out footer. https://css-tricks.com/the-slideout-footer/ */
+      .content {
+        z-index: 1;
+        position: relative;
+        background-color: #e4fde1ff;
+        width: 100%;
+      }
+      .footer {
+        /* border: 1px black solid; */
+        position: sticky;
+        bottom: 0;
+        max-width: 100%;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        background-color: lightgreen;
       }
     </style>
   </head>
   <body>
-    <h1>FoodPath!</h1>
-    <div class="container">
-      
-        <a href="#" class="navbutton">Store</a>
-        <a href="#" class="navbutton">Mac</a>
-        <a href="#" class="navbutton">iPad</a>
-        <a href="#" class="navbutton">Store</a>
-        <a href="#" class="navbutton">Mac</a>
-        <a href="#" class="navbutton">iPad</a>
+    <div class="content">
+      <div class="header">
+        <h1 class="title">FoodPath!</h1>
+        <div class="navbar">
+          <ul>
+            <li><a href="#" class="navbutton">Reviews</a></li>
+            <li><a href="#" class="navbutton">Data</a></li>
+            <li><a href="#" class="navbutton">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="action">
+        <p>Connecting people with food one restaurant at a time.</p>
+        <div class="button"><a href="#">Click Me!</a></div>
+      </div>
+      <div class="main">
+        <div class="column">
+          <p>
+            What's popular? Learn more about recent food trends and markets.
+          </p>
+          <div class="button"><a href="#">Click Me!</a></div>
+        </div>
+        <div class="column">
+          <p>Just looking to browse? See what's good.</p>
+          <div class="button"><a href="#">Click Me!</a></div>
+        </div>
+      </div>
+      <div class="map">
+        <h2>Check out the local map!</h2>
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1oaCW43JeTRrjjStscD3__AfEKUE&hl=en_US&ehbc=2E312F"
+          width="640"
+          height="480"
+        ></iframe>
+        <p class="caption">
+          <i
+            >Any number of reasons could put a restaurant on this list whether
+            it be a good review, a great wine list, or an interesting chef is at
+            the helm. No matter how it got here, it is worth checking out!
+          </i>
+        </p>
+      </div>
     </div>
-    <p>Connecting people with good eats one restaurant at a time.</p>
-    <button class="button">Click Me!</button>
+    <div class="footer">
+      <p>all rights reserved etc etc</p>
+    </div>
   </body>
 </html>
