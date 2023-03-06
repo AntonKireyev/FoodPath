@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/food-icon" href="images/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link rel="stylesheet" href="template.css" />
     <title>Foodpath Sitemap</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      h1 {
+        font-size: x-large;
+        margin-left: 1em;
+      }
+      .header {
+        margin-bottom: 0;
+      }
+      .sitemap-link {
+        color: blueviolet;
+      }
+      ul {
+        list-style: none;
+      }
+      .sitemap-link:hover {
+        color: blueviolet;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">FoodPath!</h1>
+      <div class="navbar">
+        <ul>
+          <li><a href="reviews.html" class="navbutton">Reviews</a></li>
+          <li><a href="data.html" class="navbutton">Data</a></li>
+          <li><a href="#map-popular" class="navbutton">Local Map</a></li>
+          <li><a href="index.html" class="navbutton">Home</a></li>
+        </ul>
+      </div>
+    </div>
+    <h1>Sitemap</h1>
+    <hr />
+    <ul>
+      <li><a class="sitemap-link" href="index.html">Home Page</a></li>
+      <li><a class="sitemap-link" href="pickme.html">Pick for me page</a></li>
+      <li><a class="sitemap-link" href="reviews.html">Reviews</a></li>
+      <li><a class="sitemap-link" href="index.html#map-popular">Map</a></li>
+      <li><a class="sitemap-link" href="data.html">Data</a></li>
+    </ul>
+  </body>
 </html>

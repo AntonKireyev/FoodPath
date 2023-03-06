@@ -8,7 +8,7 @@
       name="description"
       content="Foodpath is a website built to connect people to restaurants"
     />
-    <title>foodpath!</title>
+    <title>Foodpath!</title>
     <link rel="icon" type="image/food-icon" href="images/favicon.ico" />
     <link
       rel="stylesheet"
@@ -16,143 +16,13 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Abel"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Cookie"
-    />
+    <link rel="stylesheet" href="template.css" />
+    <!-- <link rel="stylesheet" href="hamburger.css" /> -->
     <style>
-      /* CSS HEX
---nyanza: #e4fde1ff;
---pistachio: #8acb88ff;
---hookers-green: #648381ff;
---raisin-black: #1e212bff;
-
-*/
-      h1 {
-        font-family: Inter;
-        color: #1e212bff;
-      }
-      h2 {
-        font-family: Inter;
-        color: #1e212bff;
-      }
       p {
-        font-size: 1.2em;
-        font-family: Inter;
-        text-align: left;
-        margin: 1em;
-        color: #1e212bff;
-      }
-      body {
-        background: #e4fde1ff;
-        margin: auto;
-      }
-      a {
-        text-decoration: none;
-        color: #1e212bff;
-        font-family: Helvetica;
-      }
-      a:hover {
-        color: white;
-      }
-      .button:hover{
-        background-color: green;
-      }
-      .header {
-        display: flex;
-        margin-bottom: 5em;
-        justify-content: space-between;
-        align-items: center;
-        /* border: 1px solid black; */
-        background-color: #8acb88ff;
-      }
-      .title {
-        margin-left: 20px;
-      }
-      .navbutton {
-        margin: 0;
-        background-color: #8acb88ff;
-        padding: 2em 1em;
-        text-align: center;
-      }
-      .navbutton:hover {
-        background-color: green;
-      }
-      .button {
-        margin: 0;
-        background-color: #8acb88ff;
-        border: 0;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        border: 1px solid black;
-        
-      }
-      .navbar ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-      .action {
-        margin-top: 2em;
-        margin-bottom: 6em;
-        /* border: 1px black solid; */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        flex-direction: column;
-      }
-      .main {
-        /* border: 1px black solid; */
-        height: 30em;
-        width: 100%;
-        margin: auto;
-        display: flex;
-      }
-      .column {
-        /* border: 1px black solid; */
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #8acb88ff;
-      }
-      .map {
-        margin-top: 4em;
-        padding-bottom: 10em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .caption {
-        text-align: center;
-        width: 60%;
-      }
-      /* can use Z-index to make a slide out footer. https://css-tricks.com/the-slideout-footer/ */
-      .content {
-        z-index: 1;
-        position: relative;
-        background-color: #e4fde1ff;
-        width: 100%;
-      }
-      .footer {
-        /* border: 1px black solid; */
-        position: sticky;
-        bottom: 0;
-        max-width: 100%;
-        display: grid;
-        place-items: center;
-        padding: 20px;
-        background-color: lightgreen;
+        font-size: 30px;
       }
     </style>
   </head>
@@ -162,9 +32,26 @@
         <h1 class="title">FoodPath!</h1>
         <div class="navbar">
           <ul>
-            <li><a href="#" class="navbutton">Reviews</a></li>
-            <li><a href="#" class="navbutton">Data</a></li>
-            <li><a href="#" class="navbutton">Sitemap</a></li>
+            <li><a href="reviews.html" class="navbutton">Reviews</a></li>
+            <li><a href="data.html" class="navbutton">Data</a></li>
+            <li><a href="#map-popular" class="navbutton">Local Map</a></li>
+            <li><a href="sitemap.html" class="navbutton">Sitemap</a></li>
+            <!-- <li>
+              <div class="dropdown">
+                <button id="hamburger" class="dropbtn">
+                  <svg viewBox="0 0 100 80" width="20" height="10">
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                  </svg>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="index.html">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -177,14 +64,14 @@
           <p>
             What's popular? Learn more about recent food trends and markets.
           </p>
-          <div class="button"><a href="#">Click Me!</a></div>
+          <div class="button"><a href="data.html">Click Me!</a></div>
         </div>
         <div class="column">
           <p>Just looking to browse? See what's good.</p>
-          <div class="button"><a href="#">Click Me!</a></div>
+          <div class="button"><a href="reviews.html">Click Me!</a></div>
         </div>
       </div>
-      <div class="map">
+      <div class="map" id="map-popular">
         <h2>Check out the local map!</h2>
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1oaCW43JeTRrjjStscD3__AfEKUE&hl=en_US&ehbc=2E312F"
@@ -203,5 +90,17 @@
     <div class="footer">
       <p>all rights reserved etc etc</p>
     </div>
+    <!-- 
+    <script>
+      // Get the button, and when the user clicks on it, execute myFunction
+      document.getElementById("hamburger").onclick = function () {
+        myFunction();
+      };
+
+      /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script> -->
   </body>
 </html>
