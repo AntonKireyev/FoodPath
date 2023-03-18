@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodpath</title>
     <link rel="icon" type="image/food-icon" href="images/favicon.ico" />
     <link
       rel="stylesheet"
@@ -15,20 +15,72 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
     />
     <link rel="stylesheet" href="template.css" />
-</head>
-<body>
+    <style>
+      .graphic {
+      }
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      .title {
+        text-align: center;
+      }
+      img {
+        height: auto;
+        width: 48%;
+      }
+      .content {
+        height: 120%;
+      }
+    </style>
+  </head>
+  <body>
     <div class="content">
-        <div class="header">
-          <h1 class="title">FoodPath!</h1>
-          <div class="navbar">
-            <ul>
-              <li><a href="reviews.html" class="navbutton">Reviews</a></li>
-              <li><a href="index.html#map-popular" class="navbutton">Local Map</a></li>
-              <li><a href="index.html" class="navbutton">Home</a></li>
-            </ul>
-          </div>
+      <div class="header">
+        <h1 class="title">FoodPath!</h1>
+        <div class="navbar">
+          <ul>
+            <li><a href="reviews.html" class="navbutton">Reviews</a></li>
+            <li>
+              <a href="index.html#map-popular" class="navbutton">Local Map</a>
+            </li>
+            <li><a href="index.html" class="navbutton">Home</a></li>
+          </ul>
         </div>
-        <div class="main">
       </div>
-</body>
+      <h1 class="title">Infographics</h1>
+      <div class="main">
+        <img
+          src="https://cdn.statcdn.com/Infographic/images/normal/29423.jpeg"
+          alt="Infographic: The Best Sandwiches in the World | Statista"
+        />
+        <img
+          src="https://cdn.statcdn.com/Infographic/images/normal/16938.jpeg"
+          alt="Infographic: Fast and Casual Dining is Big Business | Statista"
+        />
+        <img
+          src="https://cdn.statcdn.com/Infographic/images/normal/26866.jpeg"
+          alt="Infographic: America's Favorite Food Delivery Services | Statista"
+        />
+        <img
+          src="https://cdn.statcdn.com/Infographic/images/normal/27847.jpeg"
+          alt="Infographic: The World’s Top 10 Restaurants in 2022 | Statista"
+        />
+        <img
+          src="https://cdn.statcdn.com/Infographic/images/normal/25102.jpeg"
+          alt="Infographic: Americans Won't Let Inflation Spoil Their Appetite | Statista"
+        />
+        <img
+          src="https://cdn.statcdn.com/Infographic/images/normal/29177.jpeg"
+          alt="Infographic: Excuse Me, Are Those Golden Eggs? | Statista"
+        />
+      </div>
+    </div>
+    <div class="footer">
+      <p>this is a footer</p>
+    </div>
+  </body>
 </html>

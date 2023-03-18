@@ -8,7 +8,7 @@
       name="description"
       content="Foodpath is a website built to connect people to restaurants"
     />
-    <title>Foodpath!</title>
+    <title>Foodpath</title>
     <link rel="icon" type="image/food-icon" href="images/favicon.ico" />
     <link
       rel="stylesheet"
@@ -24,6 +24,13 @@
       p {
         font-size: 30px;
       }
+      .smalltext {
+        font-size: 16px;
+      }
+      /* .action {
+        background-image: url("dinner-table.jpg");
+        I want to add background image to the action section of the front page, still want to find a good image and figure out how to best add it.
+      } */
     </style>
   </head>
   <body>
@@ -33,7 +40,7 @@
         <div class="navbar">
           <ul>
             <li><a href="reviews.html" class="navbutton">Reviews</a></li>
-            <li><a href="data.html" class="navbutton">Data</a></li>
+            <li><a href="data.html" class="navbutton">Infographics</a></li>
             <li><a href="#map-popular" class="navbutton">Local Map</a></li>
             <li><a href="sitemap.html" class="navbutton">Sitemap</a></li>
             <!-- <li>
@@ -51,24 +58,24 @@
                   <a href="#contact">Contact</a>
                 </div>
               </div>
-            </li> -->
+            </li> 
+           likely not going to use this dropdown, keeping it here for no just in case.
+          -->
           </ul>
         </div>
       </div>
       <div class="action">
         <p>Connecting people with food one restaurant at a time.</p>
-        <div class="button"><a href="#">Click Me!</a></div>
+        <div class="button"><a href="rec.html">Find me a place!</a></div>
       </div>
       <div class="main">
         <div class="column">
-          <p>
-            What's popular? Learn more here!
-          </p>
-          <div class="button"><a href="data.html">Click Me!</a></div>
+          <p>What's popular? Learn more here!</p>
+          <div class="button"><a href="data.html">Infographics!</a></div>
         </div>
         <div class="column">
           <p>Just looking to browse? See what's good.</p>
-          <div class="button"><a href="reviews.html">Click Me!</a></div>
+          <div class="button"><a href="reviews.html">Reviews!</a></div>
         </div>
       </div>
       <div class="map" id="map-popular">
@@ -88,7 +95,7 @@
       </div>
     </div>
     <div class="footer">
-      <p>all rights reserved etc etc</p>
+      <p class="smalltext">Foodpath created by Anton Kireyev</p>
     </div>
     <!-- 
     <script>
