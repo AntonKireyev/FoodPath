@@ -6,124 +6,177 @@
 
 */
 h1 {
-    font-family: Inter;
-    color: #1e212bff;
+  font-family: Inter;
+  color: #1e212bff;
+  margin-left: 20px;
+}
+h2 {
+  font-family: Inter;
+  color: #1e212bff;
+  margin-left: 20px;
+}
+p {
+  font-size: 1.2em;
+  font-family: Roboto;
+  text-align: left;
+  margin: 1em;
+  color: #1e212bff;
+}
+body {
+  background: #e4fde1ff;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #1e212bff;
+  font-family: Helvetica;
+}
+a:hover {
+  color: white;
+}
+.button:hover {
+  background-color: green;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid black; */
+  background-color: #8acb88ff;
+  width: 100%;
+}
+.title {
+  margin-left: 20px;
+}
+.navbutton {
+  margin: 0;
+  background-color: #8acb88ff;
+  padding: 2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbutton:hover {
+  background-color: green;
+}
+.button {
+  margin: 0;
+  background-color: #8acb88ff;
+  border: 0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.action {
+  margin-top: 2em;
+  margin-bottom: 6em;
+  /* border: 1px black solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.main {
+  /* border: 1px black solid; */
+  height: 30em;
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+.column {
+  /* border: 1px black solid; */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #8acb88ff;
+}
+.map {
+  margin-top: 4em;
+  padding-bottom: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.caption {
+  text-align: center;
+  width: 60%;
+}
+/* can use Z-index to make a slide out footer. https://css-tricks.com/the-slideout-footer/ */
+.content {
+  z-index: 1;
+  position: relative;
+  background-color: #e4fde1ff;
+  width: 100%;
+}
+.footer {
+  /* border: 1px black solid; */
+  position: sticky;
+  bottom: 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: lightgreen;
+}
+.spacer {
+  padding-bottom: 4em;
+}
+/* Colorshift animation taken from chat GPT exercise done earlier in the semester */
+@keyframes colorshift {
+  0% {
+    color: #454b1b;
   }
-  h2 {
-    font-family: Inter;
-    color: #1e212bff;
+  7% {
+    color: #228b22;
   }
-  p {
-    font-size: 1.2em;
-    font-family: Roboto;
-    text-align: left;
-    margin: 1em;
-    color: #1e212bff;
+  14% {
+    color: #4f7942;
   }
-  body {
-    background: #e4fde1ff;
-    margin: auto;
+  23% {
+    color: #00a36c;
   }
-  a {
-    text-decoration: none;
-    color: #1e212bff;
-    font-family: Helvetica;
+  32% {
+    color: #90ee90;
   }
-  a:hover {
-    color: white;
+  39% {
+    color: #98fb98;
   }
-  .button:hover {
-    background-color: green;
+  48% {
+    color: #c1e1c1;
   }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 1px solid black; */
-    background-color: #8acb88ff;
-    width: 100%;
+  55% {
+    color: #ecffdc;
   }
-  .title {
-    margin-left: 20px;
+  63% {
+    color: #c1e1c1;
   }
-  .navbutton {
-    margin: 0;
-    background-color: #8acb88ff;
-    padding: 2em;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  70% {
+    color: #98fb98;
   }
-  .navbutton:hover {
-    background-color: green;
+  77% {
+    color: #90ee90;
   }
-  .button {
-    margin: 0;
-    background-color: #8acb88ff;
-    border: 0;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid black;
+  84% {
+    color: #00a36c;
   }
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  91% {
+    color: #4f7942;
   }
-  .action {
-    margin-top: 2em;
-    margin-bottom: 6em;
-    /* border: 1px black solid; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
+  100% {
+    color: #228b22;
   }
-  .main {
-    /* border: 1px black solid; */
-    height: 30em;
-    width: 100%;
-    margin: auto;
-    display: flex;
-  }
-  .column {
-    /* border: 1px black solid; */
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #8acb88ff;
-  }
-  .map {
-    margin-top: 4em;
-    padding-bottom: 10em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .caption {
-    text-align: center;
-    width: 60%;
-  }
-  /* can use Z-index to make a slide out footer. https://css-tricks.com/the-slideout-footer/ */
-  .content {
-    z-index: 1;
-    position: relative;
-    background-color: #e4fde1ff;
-    width: 100%;
-  }
-  .footer {
-    /* border: 1px black solid; */
-    position: sticky;
-    bottom: 0;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: lightgreen;
-  }
+}
+.title:hover {
+  animation: colorshift 3s linear infinite;
+}

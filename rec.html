@@ -28,6 +28,25 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
     />
     <link rel="stylesheet" href="template.css" />
+    <style>
+      #randomizer {
+        /* position: relative;
+        display: inline-block;
+        padding: 10px;
+        left: 40px;
+        margin-top: 3em;
+        margin-bottom: 3em; */
+      }
+
+      #nameText {
+      }
+      #styleText {
+      }
+      .results {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
     <title>Foodpath</title>
   </head>
   <body>
@@ -36,20 +55,93 @@
         <h1 class="title">FoodPath!</h1>
         <div class="navbar">
           <ul>
-            <li><a href="index.html" class="navbutton" id="homeButton">Home</a></li>
-            <li><a href="reviews.html" class="navbutton" id="reviewsButton">Reviews</a></li>
-            <li><a href="data.html" class="navbutton" id="infoButton">Infographics</a></li>
-            <li><a href="index.html#map-popular" class="navbutton" id="mapButton">Local Map</a></li>
-            <li><a href="sitemap.html" class="navbutton"id="sitemapButton">Sitemap</a></li>
+            <li>
+              <a href="index.html" class="navbutton" id="homeButton">Home</a>
+            </li>
+            <li>
+              <a href="reviews.html" class="navbutton" id="reviewsButton"
+                >Reviews</a
+              >
+            </li>
+            <li>
+              <a href="data.html" class="navbutton" id="infoButton"
+                >Infographics</a
+              >
+            </li>
+            <li>
+              <a href="index.html#map-popular" class="navbutton" id="mapButton"
+                >Local Map</a
+              >
+            </li>
+            <li>
+              <a href="sitemap.html" class="navbutton" id="sitemapButton"
+                >Sitemap</a
+              >
+            </li>
           </ul>
         </div>
       </div>
-      <p>Page under construction</p>
 
-      <p>
-        This page will suggest users a random restaurant, provide image, review,
-        and important information about the restaurant
-      </p>
+      <!-- Rather than using google API to give users the ability to search places, 
+        I used a spreadsheet created from this reddit post: https://www.reddit.com/r/boston/comments/woc0dd/i_made_a_spreadsheet_based_on_ubitpushrs_post/ 
+      By converting the sheet into a CSV file, I should be able to generate two arrays, then when the user clicks a button, it will populate the name / ethnicity of the restaurant. -->
+
+      <div class="content">
+        <h2>No idea where to go?</h2>
+
+        <p>
+          We asked local Bostonians what their favorite places to eat are. Click the
+          button below to randomly find a new restaurant from a list of 100+
+          hand-picked establishments!
+        </p>
+        <div class="spacer"></div>
+        <div class="results">
+          <p id="nameText"><strong>Restaurant name:</strong></p>
+          <p id="styleText"><strong>Style:</strong></p>
+        </div>
+        <div class="results">
+          <button class="button" id="randomizer">Click me!</button>
+        </div>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0"></script>
+    <script>
+      // I want to parse a CSV file into an array of objects
+      // I first asked chatGPT how to do this, it suggested using papa.parse, create an array, then two empty arrays,
+      // then loop through the first array and push values from the two columns into each array.
+
+      // I looked into papa.parse, it seemed relatively simple to implement.
+
+      // Parse data
+      // const resData = Papa.parse(restaurants.csv).data;
+
+      // Create 2 empty arrays
+      const resStyle = ["Japanese", "Uzbekistani", "Asian American"];
+      const resName = ["Yama", "Uzbegim", "Ward 4"];
+
+      // Loop through resData and push values into correct arrays
+      // resData.forEach((row) => {
+      //   resStyle.push(row[0]);
+      //   resName.push(row[1]);
+      // });
+      nameText = document.getElementById("nameText");
+      styleText = document.getElementById("styleText");
+      function getRandom() {
+        // Generate random index number (0-100)
+        let randInt = Math.floor(Math.random() * 3);
+        console.log(`${randInt}`);
+        // Select randomized number from resStyle
+        let randResStyle = resStyle[randInt];
+        // Select randomized number from resName
+        let randResName = resName[randInt];
+        // Display text
+        nameText.innerHTML = `<strong>Restaurant name:</strong> ${randResName}`;
+        styleText.innerHTML = `<strong>Style:</strong> ${randResStyle}`;
+      }
+
+      document.querySelector("button").addEventListener("click", function () {
+        getRandom();
+      });
+    </script>
   </body>
 </html>

@@ -30,14 +30,11 @@
     />
     <link rel="stylesheet" href="template.css" />
     <style>
-      .graphic {
-      }
       .main {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        gap: 20px;
       }
       .title {
         text-align: center;
@@ -52,7 +49,7 @@
       #infoButton {
         text-decoration: underline;
       }
-      .slides{
+      .slides {
         margin: auto;
         display: flex;
         align-items: center;
@@ -80,9 +77,7 @@
               >
             </li>
             <li>
-              <a href="index.html#map-popular" class="navbutton" id="mapButton"
-                >Local Map</a
-              >
+              <a href="map.html" class="navbutton" id="mapButton">Local Map</a>
             </li>
             <li>
               <a href="sitemap.html" class="navbutton" id="sitemapButton"
@@ -95,7 +90,7 @@
       <h1 class="title">Infographics</h1>
       <div class="main">
         <p>Learn more about food worldwide!</p>
-
+        <p id="caption">Click the image to see the next graphic ( 1/6 )</p>
         <div class="slides">
           <img
             src="https://cdn.statcdn.com/Infographic/images/normal/29423.jpeg"
@@ -103,33 +98,9 @@
             id="slideshow"
           />
         </div>
-        <p>Click the image to see the next graphic</p>
-        <!-- <img
-          src="https://cdn.statcdn.com/Infographic/images/normal/29423.jpeg"
-          alt="Infographic: The Best Sandwiches in the World | Statista"
-        />
-        <img
-          src="https://cdn.statcdn.com/Infographic/images/normal/16938.jpeg"
-          alt="Infographic: Fast and Casual Dining is Big Business | Statista"
-        />
-        <img
-          src="https://cdn.statcdn.com/Infographic/images/normal/26866.jpeg"
-          alt="Infographic: America's Favorite Food Delivery Services | Statista"
-        />
-        <img
-          src="https://cdn.statcdn.com/Infographic/images/normal/27847.jpeg"
-          alt="Infographic: The World’s Top 10 Restaurants in 2022 | Statista"
-        />
-        <img
-          src="https://cdn.statcdn.com/Infographic/images/normal/25102.jpeg"
-          alt="Infographic: Americans Won't Let Inflation Spoil Their Appetite | Statista"
-        />
-        <img
-          src="https://cdn.statcdn.com/Infographic/images/normal/29177.jpeg"
-          alt="Infographic: Excuse Me, Are Those Golden Eggs? | Statista"
-        /> -->
       </div>
     </div>
+
     <script>
       const imgEl = document.getElementById("slideshow");
       const slides = [
@@ -140,7 +111,16 @@
         "https://cdn.statcdn.com/Infographic/images/normal/25102.jpeg",
         "https://cdn.statcdn.com/Infographic/images/normal/29177.jpeg",
       ];
+      const slidesAlt = [
+        "Infographic: The Best Sandwiches in the World | Statista",
+        "Infographic: Fast and Casual Dining is Big Business | Statista",
+        "Infographic: America's Favorite Food Delivery Services | Statista",
+        "Infographic: The World’s Top 10 Restaurants in 2022 | Statista",
+        "Infographic: Americans Won't Let Inflation Spoil Their Appetite | Statista",
+        "Infographic: Excuse Me, Are Those Golden Eggs? | Statista",
+      ];
       let index = 0;
+      let caption = document.getElementById("caption");
       function slideshow() {
         if (index == slides.length) {
           index = 0;
@@ -148,9 +128,11 @@
         // Change the slide
         imgEl.src = slides[index];
         // Change the alt text
-        // imgEl.alt = slidesAlt[index];
+        imgEl.alt = slidesAlt[index];
+        caption.textContent = `Click the image to see the next graphic ( ${
+          index + 1
+        }/6 )`;
         index++;
-        // setTimeout(slideshow, 2000);
       }
 
       imgEl.addEventListener("click", function () {

@@ -46,9 +46,6 @@
       #sitemapButton {
         text-decoration: underline;
       }
-      h2 {
-        margin: 1em;
-      }
     </style>
   </head>
   <body>
@@ -56,40 +53,28 @@
       <h1 class="title">FoodPath!</h1>
       <div class="navbar">
         <ul>
-          <li>
-            <a href="index.html" class="navbutton" id="homeButton">Home</a>
-          </li>
-          <li>
-            <a href="reviews.html" class="navbutton" id="reviewsButton"
-              >Reviews</a
-            >
-          </li>
-          <li>
-            <a href="data.html" class="navbutton" id="infoButton"
-              >Infographics</a
-            >
-          </li>
-          <li>
-            <a href="map.html" class="navbutton" id="mapButton">Local Map</a>
-          </li>
-          <li>
-            <a href="sitemap.html" class="navbutton" id="sitemapButton"
-              >Sitemap</a
-            >
-          </li>
+          <li><a href="index.html" class="navbutton" id="homeButton">Home</a></li>
+          <li><a href="reviews.html" class="navbutton" id="reviewsButton">Reviews</a></li>
+          <li><a href="data.html" class="navbutton" id="infoButton">Infographics</a></li>
+          <li><a href="map.html" class="navbutton" id="mapButton">Local Map</a></li>
+          <li><a href="sitemap.html" class="navbutton"id="sitemapButton">Sitemap</a></li>
         </ul>
       </div>
     </div>
-    <div class="content">
-      <h2>Foodpath Sitemap</h2>
-      <hr />
-      <ul>
-        <li><a class="sitemap-link" href="index.html">Home Page</a></li>
-        <li><a class="sitemap-link" href="rec.html">Pick for me page</a></li>
-        <li><a class="sitemap-link" href="reviews.html">Reviews</a></li>
-        <li><a class="sitemap-link" href="map.html">Map</a></li>
-        <li><a class="sitemap-link" href="data.html">Infographics</a></li>
-      </ul>
-    </div>
+    <div class="map" id="map-popular">
+        <h2>Check out the local Boston map!</h2>
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1oaCW43JeTRrjjStscD3__AfEKUE&hl=en_US&ehbc=2E312F"
+          width="640"
+          height="480"
+        ></iframe>
+        <p class="caption">
+          <i
+            >Any number of reasons could put a restaurant on this list whether
+            it be a good review, a great wine list, or an interesting chef is at
+            the helm. No matter how it got here, it is worth checking out!
+          </i>
+        </p>
+      </div>
   </body>
 </html>
