@@ -32,18 +32,39 @@
     <title>Foodpath</title>
     <style>
       .main {
-        flex-wrap: wrap;
+        display: flex;
         justify-content: center;
         align-items: center;
         background-color: #e4fde1ff;
+        max-width: 80%;
       }
-      .yelp-review {
-        border: 1px black solid;
-      }
-      span {
-      }
-      #reviewsButton{
+      #reviewsButton {
         text-decoration: underline;
+      }
+      /* Styling / form design found here: https://www.w3schools.com/css/css_form.asp */
+      input[type="text"]:focus {
+        border: 3px solid #555;
+      }
+      label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+      }
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        margin-top: 1em;
+        background-color: #8acb88ff;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid black;
       }
     </style>
   </head>
@@ -53,156 +74,79 @@
         <h1 class="title">FoodPath!</h1>
         <div class="navbar">
           <ul>
-            <li><a href="index.html" class="navbutton" id="homeButton">Home</a></li>
-            <li><a href="reviews.html" class="navbutton" id="reviewsButton">Reviews</a></li>
-            <li><a href="data.html" class="navbutton" id="infoButton">Infographics</a></li>
-            <li><a href="map.html" class="navbutton" id="mapButton">Local Map</a></li>
-            <li><a href="sitemap.html" class="navbutton"id="sitemapButton">Sitemap</a></li>
+            <li>
+              <a href="index.html" class="navbutton" id="homeButton">Home</a>
+            </li>
+            <li>
+              <a href="reviews.html" class="navbutton" id="reviewsButton"
+                >Reviews</a
+              >
+            </li>
+            <li>
+              <a href="data.html" class="navbutton" id="infoButton"
+                >Infographics</a
+              >
+            </li>
+            <li>
+              <a href="map.html" class="navbutton" id="mapButton">Map</a>
+            </li>
+            <li>
+              <a href="sitemap.html" class="navbutton" id="sitemapButton"
+                >Sitemap</a
+              >
+            </li>
           </ul>
         </div>
       </div>
       <div class="main">
-        <span
-          class="yelp-review"
-          data-review-id="v95-H5_nffzCHeUdjf89Kg"
-          data-hostname="www.yelp.com"
-          >Read
-          <a
-            href="https://www.yelp.com/user_details?userid=lK9_xqeyb943jzK3SwqYPw"
-            rel="nofollow noopener"
-            >dan w.</a
-          >'s
-          <a
-            href="https://www.yelp.com/biz/singhs-cafe-wellesley?hrid=v95-H5_nffzCHeUdjf89Kg"
-            rel="nofollow noopener"
-            >review</a
-          >
-          of
-          <a
-            href="https://www.yelp.com/biz/vQJQMP9-8U9UwCA4xzDmqg"
-            rel="nofollow noopener"
-            >Singh's Cafe</a
-          >
-          on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-          <script
-            src="https://www.yelp.com/embed/widgets.js"
-            type="text/javascript"
-            async
-          ></script>
-        </span>
-        <span
-          class="yelp-review"
-          data-review-id="FlfkN_9n7N4INqB49Q26cA"
-          data-hostname="www.yelp.com"
-          >Read
-          <a
-            href="https://www.yelp.com/user_details?userid=-CFTCft_WIwYFujIgKQtmA"
-            rel="nofollow noopener"
-            >My-Linh D.</a
-          >'s
-          <a
-            href="https://www.yelp.com/biz/the-linden-store-wellesley?hrid=FlfkN_9n7N4INqB49Q26cA"
-            rel="nofollow noopener"
-            >review</a
-          >
-          of
-          <a
-            href="https://www.yelp.com/biz/TsX8AJfyfVAnvpfHU61Q3w"
-            rel="nofollow noopener"
-            >The Linden Store</a
-          >
-          on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-          <script
-            src="https://www.yelp.com/embed/widgets.js"
-            type="text/javascript"
-            async
-          ></script
-        ></span>
-        <span
-          class="yelp-review"
-          data-review-id="IeUHM6DjZcoEWZc4lmDLQA"
-          data-hostname="www.yelp.com"
-          >Read
-          <a
-            href="https://www.yelp.com/user_details?userid=aM05LKOhOAGTV_OSaUMchg"
-            rel="nofollow noopener"
-            >Jared B.</a
-          >'s
-          <a
-            href="https://www.yelp.com/biz/cafe-mangal-wellesley-2?hrid=IeUHM6DjZcoEWZc4lmDLQA"
-            rel="nofollow noopener"
-            >review</a
-          >
-          of
-          <a
-            href="https://www.yelp.com/biz/YYqSze9xMtEi8-1ZFAeH3A"
-            rel="nofollow noopener"
-            >Cafe Mangal</a
-          >
-          on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-          <script
-            src="https://www.yelp.com/embed/widgets.js"
-            type="text/javascript"
-            async
-          ></script
-        ></span>
-        <span
-          class="yelp-review"
-          data-review-id="dmMwDRcgKTC1PUK_IKZyUg"
-          data-hostname="www.yelp.com"
-          >Read
-          <a
-            href="https://www.yelp.com/user_details?userid=vQJGpMJ-xwwi4U2cUAiOyw"
-            rel="nofollow noopener"
-            >Kathy N.</a
-          >'s
-          <a
-            href="https://www.yelp.com/biz/sweet-basil-needham?hrid=dmMwDRcgKTC1PUK_IKZyUg"
-            rel="nofollow noopener"
-            >review</a
-          >
-          of
-          <a
-            href="https://www.yelp.com/biz/0Iva7qdGwb_Vv596pUdRtQ"
-            rel="nofollow noopener"
-            >Sweet Basil</a
-          >
-          on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-          <script
-            src="https://www.yelp.com/embed/widgets.js"
-            type="text/javascript"
-            async
-          ></script
-        ></span>
-        <span
-          class="yelp-review"
-          data-review-id="XzAjuh_s2AQ0Jkvy4Qw9kQ"
-          data-hostname="www.yelp.com"
-          >Read
-          <a
-            href="https://www.yelp.com/user_details?userid=WqnUJ2CqNq9JiPUDw4ragg"
-            rel="nofollow noopener"
-            >Mitchell S.</a
-          >'s
-          <a
-            href="https://www.yelp.com/biz/gustazo-cuban-kitchen-and-bar-waltham?hrid=XzAjuh_s2AQ0Jkvy4Qw9kQ"
-            rel="nofollow noopener"
-            >review</a
-          >
-          of
-          <a
-            href="https://www.yelp.com/biz/QIq-oL_3NTz9Z3aK9OizGw"
-            rel="nofollow noopener"
-            >Gustazo Cuban Kitchen & Bar</a
-          >
-          on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-          <script
-            src="https://www.yelp.com/embed/widgets.js"
-            type="text/javascript"
-            async
-          ></script
-        ></span>
+        <div>
+          <h2>Leave a review!</h2>
+          <p>
+            Love a place? leave a recommendation for us and it may potentially
+            be featured on our site!
+          </p>
+        </div>
+        <form method="get" action="">
+          <label for="name">Name:</label
+          ><input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name here..."
+          />
+          <label for="email">Email:</label
+          ><input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Enter your email here..."
+          />
+          <label for="resName">Restaurant name:</label
+          ><input
+            type="text"
+            name="resName"
+            id="resName"
+            placeholder="Enter restaurant name here..."
+          />
+          <label for="resStyle">Restaurant type:</label
+          ><input
+            type="text"
+            name="resStyle"
+            id="resStyle"
+            placeholder="American, Mexican, Japanese, etc..."
+          />
+          <input type="submit" />
+          <input type="reset" />
+        </form>
       </div>
     </div>
+    <div class="footer">
+      <p class="smalltext">Foodpath created by Anton Kireyev</p>
+    </div>
+    <script>
+      // I want to store recommendations (client-side), so users can reference the page 
+      // and see what restaurants they already recommended.
+
+    </script>
   </body>
 </html>

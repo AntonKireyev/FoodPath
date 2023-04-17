@@ -55,6 +55,9 @@
         align-items: center;
         justify-content: center;
       }
+      h1{
+        text-align: center;
+      }
     </style>
   </head>
   <body>
@@ -77,7 +80,7 @@
               >
             </li>
             <li>
-              <a href="map.html" class="navbutton" id="mapButton">Local Map</a>
+              <a href="map.html" class="navbutton" id="mapButton">Map</a>
             </li>
             <li>
               <a href="sitemap.html" class="navbutton" id="sitemapButton"
@@ -87,7 +90,7 @@
           </ul>
         </div>
       </div>
-      <h1 class="title">Infographics</h1>
+      <h1>Infographics</h1>
       <div class="main">
         <p>Learn more about food worldwide!</p>
         <p id="caption">Click the image to see the next graphic ( 1/6 )</p>
@@ -100,7 +103,9 @@
         </div>
       </div>
     </div>
-
+    <div class="footer">
+      <p class="smalltext">Foodpath created by Anton Kireyev</p>
+    </div>
     <script>
       const imgEl = document.getElementById("slideshow");
       const slides = [

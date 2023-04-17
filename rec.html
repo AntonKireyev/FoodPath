@@ -46,6 +46,9 @@
         display: flex;
         justify-content: center;
       }
+      .button {
+        width: 30%;
+      }
     </style>
     <title>Foodpath</title>
   </head>
@@ -90,8 +93,8 @@
         <h2>No idea where to go?</h2>
 
         <p>
-          We asked local Bostonians what their favorite places to eat are. Click the
-          button below to randomly find a new restaurant from a list of 100+
+          We asked local Bostonians what their favorite places to eat are. Click
+          the button below to randomly find a new restaurant from a list of 100+
           hand-picked establishments!
         </p>
         <div class="spacer"></div>
@@ -142,6 +145,8 @@
       document.querySelector("button").addEventListener("click", function () {
         getRandom();
       });
+
+
     </script>
   </body>
 </html>

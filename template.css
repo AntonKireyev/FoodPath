@@ -118,6 +118,7 @@ a:hover {
   position: relative;
   background-color: #e4fde1ff;
   width: 100%;
+  min-height: 100vh;
 }
 .footer {
   /* border: 1px black solid; */
