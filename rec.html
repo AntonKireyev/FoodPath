@@ -113,25 +113,39 @@
       // I first asked chatGPT how to do this, it suggested using papa.parse, create an array, then two empty arrays,
       // then loop through the first array and push values from the two columns into each array.
 
-      // I looked into papa.parse, it seemed relatively simple to implement.
+      /// GPT SOLUTION /////////
+      // Fetch the CSV file using the Fetch API
 
-      // Parse data
-      // const resData = Papa.parse(restaurants.csv).data;
+      let resStyle = [];
+      let resName = [];
+      fetch("restaurants.csv")
+        .then((response) => response.text())
+        .then((csvData) => {
+          // Parse the CSV data using Papa Parse
+          const parsedData = Papa.parse(csvData);
 
-      // Create 2 empty arrays
-      const resStyle = ["Japanese", "Uzbekistani", "Asian American"];
-      const resName = ["Yama", "Uzbegim", "Ward 4"];
+          // Extract the data and store each column in a separate array
 
-      // Loop through resData and push values into correct arrays
-      // resData.forEach((row) => {
-      //   resStyle.push(row[0]);
-      //   resName.push(row[1]);
-      // });
+          for (let i = 1; i < parsedData.data.length; i++) {
+            resStyle.push(parsedData.data[i][0]);
+            resName.push(parsedData.data[i][1]);
+          }
+
+          // Print the arrays to the console
+          console.log("Restaurant Types:", resStyle);
+          console.log("Restaurant Names:", resName);
+        });
+      /// END GPT SOLUTION /////////
+
+      // Created 2 test arrays
+      // const resStyle = ["Japanese", "Uzbekistani", "Asian American"];
+      // const resName = ["Yama", "Uzbegim", "Ward 4"];
+
       nameText = document.getElementById("nameText");
       styleText = document.getElementById("styleText");
       function getRandom() {
-        // Generate random index number (0-100)
-        let randInt = Math.floor(Math.random() * 3);
+        // Generate random index number (0-96)
+        let randInt = Math.floor(Math.random() * 96);
         console.log(`${randInt}`);
         // Select randomized number from resStyle
         let randResStyle = resStyle[randInt];
@@ -145,8 +159,6 @@
       document.querySelector("button").addEventListener("click", function () {
         getRandom();
       });
-
-
     </script>
   </body>
 </html>
