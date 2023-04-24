@@ -39,6 +39,7 @@ a:hover {
 }
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   /* border: 1px solid black; */
@@ -72,6 +73,7 @@ a:hover {
 .navbar ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -123,7 +125,7 @@ a:hover {
 .footer {
   /* border: 1px black solid; */
   position: sticky;
-  bottom: 0;
+  bottom: 0px;
   max-width: 100%;
   display: flex;
   justify-content: center;
