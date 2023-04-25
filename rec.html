@@ -81,7 +81,7 @@
       </div>
 
       <!-- Rather than using google API to give users the ability to search places, 
-        I used a spreadsheet created from this reddit post: https://www.reddit.com/r/boston/comments/woc0dd/i_made_a_spreadsheet_based_on_ubitpushrs_post/ 
+      I used a spreadsheet created from this reddit post: https://www.reddit.com/r/boston/comments/woc0dd/i_made_a_spreadsheet_based_on_ubitpushrs_post/ 
       By converting the sheet into a CSV file, I should be able to generate two arrays, then when the user clicks a button, it will populate the name / ethnicity of the restaurant. -->
 
       <div class="content">
@@ -132,7 +132,7 @@
         });
       /// END GPT SOLUTION /////////
 
-      // Created 2 test arrays
+      // 2 test arrays
       // const resStyle = ["Japanese", "Uzbekistani", "Asian American"];
       // const resName = ["Yama", "Uzbegim", "Ward 4"];
 
@@ -140,7 +140,7 @@
       styleText = document.getElementById("styleText");
       function getRandom() {
         // Generate random index number (0-96)
-        let randInt = Math.floor(Math.random() * 96);
+        let randInt = Math.floor(Math.random() * 97);
         console.log(`${randInt}`);
         // Select randomized number from resStyle
         let randResStyle = resStyle[randInt];
