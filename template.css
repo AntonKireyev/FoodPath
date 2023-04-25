@@ -49,6 +49,9 @@ a:hover {
 .title {
   margin-left: 20px;
 }
+.smalltext {
+  font-size: 16px;
+}
 .navbutton {
   margin: 0;
   background-color: #8acb88ff;
