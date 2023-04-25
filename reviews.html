@@ -42,7 +42,8 @@
         text-decoration: underline;
       }
       /* Styling / form design found here: https://www.w3schools.com/css/css_form.asp */
-      input[type="text"]:focus {
+      input[type="text"]:focus,
+      input[type="email"]:focus {
         border: 3px solid #555;
       }
       label {
@@ -50,6 +51,7 @@
         display: inline-block;
       }
       input[type="text"],
+      input[type="email"],
       select,
       textarea {
         width: 100%;
@@ -106,20 +108,30 @@
             be featured on our site!
           </p>
         </div>
-        <form method="get" action="">
+        <form
+          id="myForm"
+          method="post"
+          action="#"
+          onsubmit="return validateForm()"
+        >
           <label for="name">Name:</label
           ><input
             type="text"
             name="name"
             id="name"
             placeholder="Enter your name here..."
+            required
+            required
+            minlength="3"
+            maxlength="50"
           />
           <label for="email">Email:</label
           ><input
-            type="text"
+            type="email"
             name="email"
             id="email"
             placeholder="Enter your email here..."
+            required
           />
           <label for="resName">Restaurant name:</label
           ><input
@@ -127,6 +139,9 @@
             name="resName"
             id="resName"
             placeholder="Enter restaurant name here..."
+            minlength="3"
+            maxlength="50"
+            required
           />
           <label for="resStyle">Restaurant type:</label
           ><input
@@ -134,6 +149,9 @@
             name="resStyle"
             id="resStyle"
             placeholder="American, Mexican, Japanese, etc..."
+            minlength="3"
+            maxlength="50"
+            required
           />
           <input type="submit" />
           <input type="reset" />
@@ -144,9 +162,65 @@
       <p class="smalltext">Foodpath created by Anton Kireyev</p>
     </div>
     <script>
-      // I want to store recommendations (client-side), so users can reference the page 
+      // I want to store recommendations (client-side), so users can reference the page
       // and see what restaurants they already recommended.
 
+      // Form Validation: https://www.w3schools.com/js/js_validation.asp
+
+      function validateForm() {
+        let nameInput = document.getElementById("name");
+        let emailInput = document.getElementById("email");
+        let resNameInput = document.getElementById("resName");
+        let resStyleInput = document.getElementById("resStyle");
+
+        // Check if all the fields are filled out
+        if (
+          nameInput.value == "" ||
+          emailInput.value == "" ||
+          resNameInput.value == "" ||
+          resStyleInput.value == ""
+        ) {
+          alert("Please fill out all the required fields.");
+          return false;
+        }
+
+        // Check if the name, restaurant name, and restaurant type have at least 3 characters but no more than 50 characters
+        if (nameInput.value.length < 3 || nameInput.value.length > 50) {
+          alert(
+            "Please enter a value between 3 and 50 characters for your Name"
+          );
+          return false;
+        }
+
+        if (resNameInput.value.length < 3 || resNameInput.value.length > 50) {
+          alert(
+            "Please enter a value between 3 and 50 characters for the Restaurant Name."
+          );
+          return false;
+        }
+
+        if (resStyleInput.value.length < 3 || resStyleInput.value.length > 50) {
+          alert(
+            "Please enter a value between 3 and 50 characters for the Restaurant Type field."
+          );
+          return false;
+        }
+
+        // Check if the email address is valid using regular expressions
+        // https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
+        // Chat GPT used as well to generate a regular expression and implement it.
+        let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!emailRegex.test(emailInput.value)) {
+          alert("Please enter a valid email address.");
+          return false;
+        }
+
+        // The form is valid
+        alert("Form submitted successfully!");
+
+        // I want it to return false because I had issues with submitting the form and clearing the page, likely because I'm not actually storing the data anywhere.
+        return false;
+      }
     </script>
   </body>
 </html>
